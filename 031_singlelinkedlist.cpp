@@ -8,7 +8,26 @@ struct Node {
 };
 
 Node* START = NULL;
-int main()
-{
-    std::cout << "Hello World!\n";
-}
+
+void addNode() {
+	int nim;
+	string nama;
+	Node* nodeBaru = new Node();
+
+	cout << "Masukan Nim  : ";
+	cin >> nim;
+	cout << "Masukan nama : ";
+	cin >> nama;
+
+	nodeBaru->noMhs = nim;
+	nodeBaru->name = nama;
+
+	if (START == NULL || nim <= START->noMhs) {
+		if (START != NULL && nim == START->noMhs) {
+			cout << "\nNim sudah ada!" << endl;
+			return;
+		}
+		nodeBaru->next = START;
+		START = nodeBaru;
+		return;
+	}
