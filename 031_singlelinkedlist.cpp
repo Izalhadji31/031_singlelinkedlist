@@ -72,10 +72,18 @@ bool deleteNode(int nim) {
 	previous->next = current->next;
 	if (current == START)
 		START = current->next;
-	bool listEmpty() {
+}
+bool listEmpty() {
 		if (START == NULL)
 			return true;
 		else
 			return false;
-	}
 }
+
+void traverse() {
+	if (listEmpty()) {
+		cout << "List kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
