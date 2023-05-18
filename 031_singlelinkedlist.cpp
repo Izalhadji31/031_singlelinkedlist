@@ -7,7 +7,7 @@ struct Node {
     Node* next;
 };
 
-
+Node* START = NULL;
 int main()
 {
     std::cout << "Hello World!\n";
