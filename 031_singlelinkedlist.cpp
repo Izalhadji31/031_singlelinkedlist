@@ -7,6 +7,7 @@ struct Node {
     Node* next;
 };
 
+
 int main()
 {
     std::cout << "Hello World!\n";
